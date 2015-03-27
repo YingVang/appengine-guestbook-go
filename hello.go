@@ -30,6 +30,8 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusFound)
 		return
 	}
+	w.Header().Set("LedZepSong", "Black Dog")
+	w.WriteHeader(http.StatusFound)
 	// [END if_user]
 	// [START output]
 	fmt.Fprintf(w, "Hello, %v!", u)
